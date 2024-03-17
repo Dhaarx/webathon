@@ -11,13 +11,11 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/express', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-db.once('open', () => console.log('Connected to MongoDB'));
+async function dbconnect(){
+  await mongoose.connect('mongodb://localhost:27017/express');
+}
+
+dbconnect()
 // server.js
 // Define user schema
 const userSchema = new mongoose.Schema({
@@ -34,10 +32,10 @@ app.post('/signup', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
     const newUser = new User({ username, email, password: hashedPassword });
     await newUser.save();
-    res.status(201).json({ message: 'User created successfully' });
+    return res.status(201).json({ message: 'User created successfully' });
   } catch (error) {
     console.error('Error signing up:', error);
-    res.status(500).json({ message: 'Internal server error' });
+    return res.status(500).json({ message: 'Internal server error' });
   }
 });
 
@@ -54,7 +52,7 @@ app.post('/signin', async (req, res) => {
       return res.status(401).json({error:true, message: 'Invalid email or password' });
     }
     const token = jwt.sign({ email: user.email }, 'secret');
-     res.status(200).json({ message: 'Sign in successful', token });
+     return res.status(200).json({ message: 'Sign in successful', token });
   } catch (error) {
     console.error('Error signing in:', error);
     return  res.status(500).json({ message: 'Internal server error' });
