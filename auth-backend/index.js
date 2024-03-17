@@ -6,7 +6,7 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const bodyParser = require('body-parser')
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 
 const corsOption = {
   origin:['https://webathon-eta.vercel.app/','http://localhost:3000'],
@@ -18,7 +18,8 @@ app.use(cors(corsOption));
 app.use(express.json());
 app.use(bodyParser.json())
 async function dbconnect(){
-  await mongoose.connect('mongodb://localhost:27017/express');
+  await mongoose.connect('mongodb+srv://kishore762k4:kishore1234@atlas1.j1vhjqd.mongodb.net/LOGINDETAILS?retryWrites=true&w=majority&appName=Atlas1');
+  console.log('mongodb connect')
 }
 
 dbconnect()
