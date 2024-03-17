@@ -1,0 +1,35 @@
+.first {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+   
+  }
+ul li:not(:first-child){
+    display: inline;
+    margin-left: 20px;
+    margin-right: 50px;
+    
+
+  }  
+ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+   
+  }
+ul li:first-child{
+    display: inline;
+    margin-left: 0px;
+   
+}
+.logo{
+    display:flex-start;
+    position: absolute;
+    top: 0%;
+    left: 4%;
+    padding-top: 1.6%;
+   font-size: 240%;
+   color: #fbef07;
+font-weight: 700;
+
+}

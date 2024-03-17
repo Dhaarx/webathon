@@ -1,0 +1,148 @@
+h2{
+    color:white;
+    margin-left: 5%;
+}
+.payment-container{
+position: relative;
+left:65%;
+width: 33rem;
+height: 48rem;
+border-radius: 20px;   
+background: linear-gradient(180deg, #FFF500 0%, #FFDF39 100%);
+margin-bottom: 10%;
+padding: 2.5%;
+}
+
+.payment-container h3{
+    justify-content: flex-start;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: x-large;
+}
+.payment-container p{
+    position: absolute;
+    top: 6.5%;
+    right: 15%;
+    font-size: large;
+    font-weight: 100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.user-info img{
+ position: absolute;   
+width: 50px;
+height: 50px;
+top: 6.7%;
+right: 2%;
+border-radius: 50px;   
+
+}
+
+.methods img{
+    flex-direction: row;
+    margin-top: 5%;
+    width: 80px;
+    height: 70px;
+    justify-content: space-between;
+    margin: 5%;
+    
+    
+    
+}
+.details p{
+    position: inherit;
+    display: inline-block;
+    text-align: left;
+    padding-left: 4%;
+    line-height: normal;
+    vertical-align: middle;
+
+}
+
+.bill-amount p{
+    position: inherit;
+    display: inline-block;
+    text-align: left;
+    margin-top: 4.2rem;
+    padding-left: 4%;
+    line-height: normal;
+   
+
+}
+.bill-amount1 p{
+    position: inherit;
+    display: inline-block;
+    text-align: left;
+    margin-top: 1.5rem;
+    padding-left: 4%;
+    line-height: normal;
+    vertical-align: middle;
+
+}
+
+.bill p{
+    position: absolute;
+    right: 5%;
+    margin-right: 5%;
+    top: 69%;
+}
+.bill1 p{
+    position: absolute;
+    right: 5%;
+    margin-right: 5%;
+    top: 78%;
+}
+.pay{
+position: absolute;
+
+top: 90%;
+width: 350px;
+height: 60px;
+border-radius: 12px; 
+background: rgba(19, 16, 56, 1);
+margin-left: 10%;
+
+
+
+}
+.pay p{
+   
+    display: flex;
+    left: 10%;
+    color: white;
+   
+
+}
+.pay .inner-pay p{
+    position: absolute;
+    right: 7%;
+    justify-content: flex-end;
+    color: white;
+   
+
+}
+.details input{
+margin-left: 1rem;   
+width: 15rem;
+height: 1.5rem;
+}
+
+.details2 input{
+margin-left: 1rem;   
+width: 8rem;
+height: 1.5rem;
+}
+.cvv input{
+    width: 7rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    
+}
+
+.cvv{
+    position: absolute;
+    top: 26.9rem;
+    left: 19.3rem;
+    font-size: large;
+    font-weight: 100;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
