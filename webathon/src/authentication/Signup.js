@@ -26,7 +26,7 @@ const Signup = () => {
 
    
       try {
-        await axios.post('https://webathon-eta.vercel.app/signup', formData);
+        await axios.post('http://localhost:5000/signup', formData);
         alert('User signed up successfully');
       } catch (error) {
         console.error('Error signing up:', error);
